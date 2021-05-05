@@ -1,0 +1,479 @@
+/*============================================*/
+/*==== 1.TIPOGRAFIA DEL SITIO ====*/
+/*============================================*/
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #696969;
+}
+
+/*============================================*/
+/*==== 2. ESTILOS GENERALES DE BOTONES ====*/
+/*============================================*/
+.btn {
+  border-radius: 2rem;
+  font-weight: bold;
+  padding: .6rem 2rem;
+}
+
+/*============================================*/
+/*==== 3. ESTILOS DE COLOR GENERAL ====*/
+/*============================================*/
+.bg-primary {
+  background-color: #00ad75 !important;
+}
+
+.text-primary {
+  color: #00ad75 !important;
+}
+
+/*Estilos btn-primary*/
+.btn-primary {
+  color: #fff;
+  background-color: #00ad75;
+  border-color: #00ad75;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .5s ease;
+}
+
+.btn-primary:hover {
+  color: #35363c;
+  background-color: #fff;
+  border-color: #00ad75;
+}
+
+.btn-primary:active {
+  color: #35363c !important;
+  background-color: #00c786 !important;
+  border-color: #00e097 !important;
+}
+
+.btn-primary:focus {
+  color: #35363c !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 173, 117, 0.5) !important;
+}
+
+.btn-primary:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f138";
+  position: relative;
+  left: .6rem;
+  top: .1rem;
+  transition: left .3s ease;
+}
+
+.btn-primary:hover:after, .btn-primary:focus:after, .btn-primary:active:after {
+  left: .25rem;
+}
+
+/* Insertamos la caja blanca del boton principal */
+.btn-primary:before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: skew(45deg, 0);
+  transition: all .5s ease;
+}
+
+.btn-primary:hover:before, .btn-primary:focus:before, .btn-primary:active:before {
+  width: 130%;
+  left: -15%;
+}
+
+/*============================================*/
+/*==== 4. ESTILOS DE COLOR SECUNDARIO ====*/
+/*============================================*/
+.bg-secondary {
+  background-color: #35363c !important;
+}
+
+.text-secondary {
+  color: #35363c !important;
+}
+
+/*============================================*/
+/*==== 5. ESTILOS PARA REDES SOCIALES ====*/
+/*=========================================*/
+.redes-sociales li a i {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: .6rem 1rem;
+  opacity: .8;
+  transition: all .3s ease-in-out;
+}
+
+.redes-sociales li a i:hover {
+  opacity: 1;
+  transform: scale(1.3) rotate(360deg);
+}
+
+/*============================================*/
+/*==== 6. ESTILOS PARA MENU-NAVEGACION ====*/
+/*=========================================*/
+/* Quitamos estilos al boton por defecto */
+#menu-navegacion .navbar-toggler {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: 0;
+}
+
+/* Estilos de boton del menu personalizado */
+#menu-navegacion .boton-menu:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0c9";
+  font-weight: 900;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#menu-navegacion .icono-cerrar:before {
+  content: "\f00d";
+  position: relative;
+  left: .2rem;
+}
+
+/* Estilos en los enlaces del #menu-navegacion */
+.navbar-dark .navbar-nav .nav-link {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: .5rem;
+  transition: all .3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-weight: 900;
+  transition: all .3s ease;
+}
+
+/* Estilos estado de hover de enlace */
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #4d4e57;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover:after {
+  transform: rotateZ(180deg);
+}
+
+/* Estilos para el enlace activo */
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: #00ad75;
+}
+
+/* Clase cuando la barra de navegacion se fija a la parte superior */
+.menu-fijo {
+  background-color: #1d1e21 !important;
+  transition: all .9s ease;
+}
+
+/*============================================*/
+/*==== 7. ESTILOS PARA "#animacion" ---SLIDER--- ====*/
+/*=========================================*/
+.swiper-slide {
+  height: 34rem;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center center;
+}
+
+.swiper-slide:before {
+  content: "";
+  position: absolute;
+  background: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .4;
+}
+
+/* Para desaparecer la flecha de prev */
+.swiper-button-prev::after {
+  content: "";
+}
+
+/* Para desaparecer la flecha de next */
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.151);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f060";
+}
+
+.swiper-button-next::before {
+  transform: rotate(180deg);
+}
+
+/* Estado hover de los botones */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.46);
+  color: #00ad75;
+}
+
+/* Estilos para el paginador */
+.swiper-pagination {
+  padding-bottom: 2rem !important;
+}
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 .4rem !important;
+  background: #fff;
+  opacity: 1;
+  transition: all .4s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00ad75;
+}
+
+/*============================================*/
+/*==== 8. ESTILOS PARA #bienvenidos ====*/
+/*=========================================*/
+.contenedor-video a {
+  background-color: rgba(255, 255, 255, 0.79);
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  border-radius: 50%;
+  color: #00ad75;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-clip: padding-box;
+  border: 0 solid transparent;
+  transition: all .5s ease;
+}
+
+.contenedor-video a:hover {
+  background-color: #00ad75;
+  color: #fff;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+}
+
+.contenedor-video img {
+  transition: all .5s ease;
+}
+
+.contenedor-video:hover img {
+  transform: scale(1.2);
+}
+
+/*============================================*/
+/*==== 9. ESTILOS PARA #TE-AYUDAMOS ====*/
+/*=========================================*/
+#te-ayudamos {
+  position: relative;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+}
+
+#te-ayudamos::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.52);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*============================================*/
+/*==== 10. ESTILOS PARA #PREMIOS ====*/
+/*=========================================*/
+.contador-linea {
+  background-color: #00ad75;
+  width: 4rem;
+  height: .4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all .4s ease;
+}
+
+#premios .col-6:hover .contador-linea {
+  bottom: 1rem;
+  transform: translateX(-50%) rotate(180deg);
+  background-color: #35363c;
+}
+
+/*============================================*/
+/*==== 11. ESTILOS PARA "#CONTACTANOS" ====*/
+/*=========================================*/
+#contacto .detalle-rectangulo {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #00ad75;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%) rotate(45deg);
+}
+
+.input-group-cita {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Personalizando el selecto de fechas */
+.picker__box {
+  border: 10px solid #00ad75 !important;
+}
+
+.picker__list-item--highlighted,
+.picker__day--highlighted,
+.picker__list-item:hover {
+  border-color: #007a53 !important;
+}
+
+.picker--focused .picker__day--selected {
+  background: #00ad75 !important;
+  color: #fff !important;
+}
+
+.picker--focused .picker__day--selected::before {
+  border-top: .5rem solid #ffffff !important;
+}
+
+.picker__select--month,
+.picker__select--year {
+  margin-top: -.3rem !important;
+  padding: 0.5rem !important;
+  border-radius: .5rem;
+}
+
+/* Personalizando el selector de hora */
+.picker--focused .picker__list-item--highlighted,
+.picker__list-item--highlighted:hover,
+.picker__list-item:hover {
+  cursor: pointer;
+  color: #000;
+  background: #00ad75 !important;
+}
+
+.picker__list {
+  padding: .5rem 0 !important;
+}
+
+.picker--time .picker__button--clear {
+  color: #696969 !important;
+  background: rgba(209, 255, 2, 0.582) !important;
+  border-radius: .5rem;
+  transition: all .5s ease;
+}
+
+.picker--time .picker__button--clear:hover {
+  background: #e9da0c !important;
+}
+
+.picker__button--clear:before {
+  display: none !important;
+  width: 0 !important;
+}
+
+/*============================================*/
+/*==== ESTILOS PARA #PIE-DE-PAGINA  ====*/
+/*=========================================*/
+.columna-inclinada::before {
+  content: "";
+  position: absolute;
+  background: #00ad75;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  left: -100%;
+}
+
+.enlaces-secundario {
+  border-bottom: 1px solid #5d666f;
+  box-shadow: 0 1px #212529;
+}
+
+.enlaces-secundario a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/*============================================*/
+/*==== SHOW DE LAS MEDIAS QUERIES ====*/
+/*=========================================*/
+@media (min-width: 768px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: .7rem 1.2rem;
+    border-radius: 1.5rem;
+  }
+  .navbar-dark .navbar-nav .nav-link:after {
+    content: "";
+  }
+  #te-ayudamos {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  }
+  .columna-inclinada::before {
+    right: 0;
+    left: -300%;
+    transform: skewX(20deg);
+  }
+}
+
+@media (min-width: 990px) {
+  html {
+    font-size: 16px;
+  }
+  .swiper-slide {
+    height: 37.5rem;
+  }
+  #te-ayudamos .container {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-slide {
+    height: 44rem;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
